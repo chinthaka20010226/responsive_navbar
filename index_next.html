@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Responsive NavBar</title>
+        <script src="https://kit.fontawesome.com/d136736279.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style_next.css">
+    </head>
+    <body>
+        <header class="head">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="#">Web Dev Creative</a>
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="action-btn">
+                    <a href="#">Get Started</a>
+                </div>
+                <div class="toggle-bar">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+            <div class="body">
+                <h1>Welcome</h1>
+                <p>Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Error, distinctio.
+                </p>
+            </div>
+            <div class="dropdown-menu">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <div class="action-btn">
+                    <a href="#">Get Started</a>
+                </div>
+            </div>
+        </header>
+
+        <script>
+            const toggleBtn = document.querySelector('.toggle-bar');
+            const toggleBtnIcon = document.querySelector('.toggle-bar i');
+            const dropDownMenu = document.querySelector('./dropdwon-menu');
+
+            toggleBtn.onclick = function () {
+                dropDownMenu.classList.toggle('open')
+            }
+        </script>
+    </body>
+</html>

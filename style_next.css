@@ -1,0 +1,202 @@
+/* Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+/* Header */
+/* Navigation */
+.head {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    /* background-color: cyan; */
+}
+.head .navbar {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    /* background-color: aqua; */
+}
+.head .navbar .logo {
+    font-size: 35px;
+    font-weight: 600;
+    padding-left: 70px;
+}
+.head .navbar .logo a {
+    color: whitesmoke;
+}
+.head .navbar .nav-links ul {
+    display: flex;
+    margin-right: 100px;
+}
+.head .navbar .nav-links ul li {
+    padding: 20px;
+}
+.head .navbar .nav-links ul li a {
+    color: whitesmoke;
+}
+.head .navbar .nav-links .active {
+    text-decoration: underline;
+    color: rgb(233, 37, 37);
+}
+.head .navbar .action-btn {
+    margin-right: 100px;
+}
+.head .navbar .action-btn a{
+    background-color: rgb(233, 37, 37);
+    padding: 10px;
+    color: whitesmoke;
+    font-weight: bold;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    transition: scale 0.2 ease;
+    -webkit-transition: scale 0.2 ease;
+    -moz-transition: scale 0.2 ease;
+    -ms-transition: scale 0.2 ease;
+    -o-transition: scale 0.2 ease;
+}
+.head .navbar .toggle-bar {
+    display: none;
+    font-size: 30px;
+    padding: 10px;
+    color: whitesmoke;
+}
+
+/* Body */
+.head .body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url('./pexels-photo-1183099.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+.head .body h1 {
+    font-size: 90px;
+    color: whitesmoke;
+    padding: 10px;
+    margin-top: 70px;
+}
+.head .body p {
+    width: 300px;
+    color: white;
+    text-align: center;
+    line-height: 1.3em;
+}
+
+/* Dropdwon Menu */
+.head .dropdown-menu {
+    position: absolute;
+    top: 2rem;
+    right: 60px;
+    width: 300px;
+    height: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    overflow: hidden;
+    display: none;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -moz-transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -ms-transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -o-transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown-menu.open {
+    height: 240px;
+}
+.head .dropdown-menu 
+.head .dropdown-menu li {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.head .dropdown-menu li a {
+    color: whitesmoke;
+}
+.head .dropdown-menu .active {
+    text-decoration: underline;
+    color: rgb(233, 37, 37);
+}
+.dropdown-menu .action-btn a {
+    background-color: rgb(233, 37, 37);
+    padding: 10px;
+    color: whitesmoke;
+    font-weight: bold;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    transition: scale 0.2 ease;
+    -webkit-transition: scale 0.2 ease;
+    -moz-transition: scale 0.2 ease;
+    -ms-transition: scale 0.2 ease;
+    -o-transition: scale 0.2 ease;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .head .navbar .nav-links,
+    .head .navbar .action-btn {
+        display: none;
+    }
+    .head .navbar .toggle-bar {
+        display: block;
+    }
+    .head .dropdown-menu {
+        display: block;
+    }
+}
+
+
+/* Animation */
+.head .navbar .nav-links ul li a:hover {
+    color: rgb(233, 37, 37);
+}
+.head .navbar .action-btn a:hover {
+    color: rgb(233, 37, 37);
+    background-color: whitesmoke;
+    box-shadow: 2px 2px 5px #00000056;
+}
+.head .navbar .action-btn:active {
+    scale: 0.90;
+}
+.head .dropdown-menu li a:hover {
+    color: rgb(233, 37, 37);
+}
+.head .dropdown-menu .action-btn a:hover {
+    color: rgb(233, 37, 37);
+    background-color: whitesmoke;
+    box-shadow: 2px 2px 5px #00000056;
+}
+.head .dropdown-menu .action-btn:active {
+    scale: 0.90;
+}
